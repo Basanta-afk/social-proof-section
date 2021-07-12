@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Social proof section</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #F7F3F7;
+            font-size: 15px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 52px 45px;
+            font-family: 'Spartan', sans-serif;
+        }
+        
+        img {
+            width: 100%;
+        }
+        
+        main {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 56px;
+            margin: auto;
+        }
+        
+        .top-section {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .sub_section-left {
+            max-width: 500px;
+            gap: 14px;
+        }
+        
+        .title {
+            font-weight: 700;
+            color: #502050;
+            font-size: 54px;
+            line-height: 1;
+        }
+        
+        .description {
+            font-weight: 400;
+            color: #937B92;
+            font-size: 18px;
+            line-height: 1.5;
+            letter-spacing: 1px;
+        }
+        
+        .sub-section {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .sub_section-right {
+            align-items: flex-start;
+            flex: 0 520px;
+            gap: 20px;
+        }
+        
+        .rating-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(240, 211, 216);
+            gap: 30px;
+            padding: 18px 36px;
+            border-radius: 10px;
+        }
+        
+        .rating-bar:nth-child(1) {
+            align-self: flex-start;
+        }
+        
+        .rating-bar:nth-child(2) {
+            align-self: center;
+        }
+        
+        .rating-bar:nth-child(3) {
+            align-self: flex-end;
+        }
+        
+        .rating-stars {
+            display: flex;
+            flex-shrink: 0;
+            gap: 10px;
+        }
+        
+        .rating-ratings {
+            font-size: 14px;
+            font-weight: 700;
+            color: #542153;
+        }
+        
+        .bottom-section {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .card {
+            background: #542153;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border-radius: 10px;
+            gap: 20px;
+            padding: 42px 34px;
+        }
+        
+        .card:nth-child(1) {
+            transform: translateY(-18px);
+        }
+        
+        .card:nth-child(3) {
+            transform: translateY(18px);
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .avatar {
+            border-radius: 100%;
+            overflow: hidden;
+            height: 48px;
+            width: 48px;
+        }
+        
+        .profile {
+            display: flex;
+            flex-direction: column;
+            font-weight: 600;
+            font-size: 14px;
+            opacity: 5;
+        }
+        
+        .name {
+            color: #F7F3F7;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        
+        .status {
+            color: pink;
+            font-size: 14px;
+            font-weight: 400;
+            opacity: 0.5;
+        }
+        
+        .card-content {
+            flex: 1;
+            color: #F7F3F7;
+        }
+        
+        .bio {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.8;
+        }
+        
+        .attribution {
+            font-size: 16px;
+            text-align: center;
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            font-family: sans-serif;
+        }
+        
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+            text-decoration: none;
+        }
+        
+        @media (max-width: 767px) {
+            .main,
+            .sub_section-left,
+            .top-section {
+                gap: 30px;
+            }
+            .top-section {
+                margin: auto;
+                flex-direction: column;
+                text-align: center;
+            }
+            .sub_section-right {
+                align-items: center;
+                flex: 0 auto;
+            }
+            .bottom-section {
+                flex-direction: column;
+            }
+            .rating-bar {
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+            .rating-bar:nth-child(n) {
+                align-self: stretch;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="top-section">
+            <div class="sub-section sub_section-left">
+                <h1 class="title">
+                    10,000+ of our users love our products.
+                </h1>
+                <p class="description">
+                    We only provide great products combined with excellent customer service. See what our satisfied customers are saying about our services.
+                </p>
+            </div>
+            <div class="sub-section sub_section-right">
+                <div class="rating-bar">
+                    <div class="rating-stars">
+                        <img src="images/icon-star.svg" alt="Star">
+                        <img src="images/icon-star.svg" alt="Star">
+                        <img src="images/icon-star.svg" alt="Star">
+                        <img src="images/icon-star.svg" alt="Star">
+                        <img src="images/icon-star.svg" alt="Star">
+                    </div>
+                    <strong class="rating-ratings">Rated 5 Stars in Review</strong>
+                </div>
+
+                <div class="rating-bar">
+                    <div class="rating-stars">
+                        <img src="images/icon-star.svg" alt="Star">
+                        <img src="images/icon-star.svg" alt="Star">
+                        <img src="images/icon-star.svg" alt="Star">
+                        <img src="images/icon-star.svg" alt="Star">
+                        <img src="images/icon-star.svg" alt="Star">
+                    </div>
+                    <strong>Rated 5 Stars in Report Guru</strong>
+                </div>
+
+                <div class="rating-bar">
+                    <div class="rating-stars">
+                        <img src="images/icon-star.svg" alt="Star">
+                        <img src="images/icon-star.svg" alt="Star">
+                        <img src="images/icon-star.svg" alt="Star">
+                        <img src="images/icon-star.svg" alt="Star">
+                        <img src="images/icon-star.svg" alt="Star">
+                    </div>
+                    <strong>Rated 5 Stars in BestTech</strong>
+                </div>
+            </div>
+        </section>
+        <section class="bottom-section">
+            <div class="card">
+                <header class="card-header">
+                    <div class="avatar">
+                        <img src="images/image-colton.jpg" alt="Colton">
+                    </div>
+                    <div class="profile">
+                        <strong class="name">Colton Smith </strong>
+                        <span class="status">Verified Buyer </span>
+                    </div>
+                </header>
+                <div class="card-content">
+                    <p class="bio">
+                        "We needed the same printed design as the one we had ordered a week prior. Not only did they find the original order, but we also received it in time. Excellent!"
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <header class="card-header">
+                    <div class="avatar">
+                        <img src="images/image-anne.jpg" alt="Anne">
+                    </div>
+                    <div class="profile">
+                        <strong class="name"> Anne Wallace </strong>
+                        <span class="status">Verified Buyer </span>
+                    </div>
+                </header>
+                <div class="card-content">
+                    <p class="bio">
+                        "Put an order with this company and can only praise them for the very high standard. Will definitely use them again and recommend them to everyone!"
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <header class="card-header">
+                    <div class="avatar">
+                        <img src="images/image-irene.jpg" alt="Irene">
+                    </div>
+                    <div class="profile">
+                        <strong class="name">Irene Roberts  </strong>
+                        <span class="status">Verified Buyer </span>
+                    </div>
+                </header>
+                <div class="card-content">
+                    <p class="bio">
+                        "Customer service is always excellent and very quick turn around. Completely delighted with the simplicity of the purchase and the speed of delivery."
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="attribution">
+            Challenge by
+            <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://twitter.com/BhusanKhadka">Basanta Bhusan Khadka</a>.
+        </div>
+    </footer>
+
+</body>
+
+</html>
